@@ -1,0 +1,26 @@
+.wrapper {
+  text-align: center;
+  margin: 1rem 0;
+  min-height: 2.5rem;
+}
+
+.message {
+  margin: 0 0 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.playAgain {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--bg);
+  background: var(--text);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.playAgain:hover {
+  filter: brightness(0.9);
+}

@@ -1,0 +1,114 @@
+.layout {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  max-width: 900px;
+  margin: 0 auto;
+  background: #fff;
+}
+
+.main {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem 1rem 2rem;
+}
+
+.header {
+  width: 100%;
+  max-width: 560px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.headerLeft {
+  flex: 1;
+  text-align: center;
+}
+
+.headerRight {
+  flex-shrink: 0;
+  padding-top: 0.25rem;
+}
+
+.statsIcon {
+  background: none;
+  border: none;
+  padding: 6px;
+  cursor: pointer;
+  color: #333;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.statsIcon:hover {
+  background: #eee;
+  color: #000;
+}
+
+.title {
+  margin: 0 0 0.25rem;
+  font-size: 1.75rem;
+  font-weight: 700;
+}
+
+.instructions {
+  margin: 0;
+  font-size: 0.8rem;
+  color: #565758;
+  max-width: 360px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.alreadyPlayed {
+  text-align: center;
+  padding: 2rem 1rem;
+  max-width: 360px;
+}
+
+.alreadyPlayedTitle {
+  margin: 0 0 0.5rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.alreadyPlayedSub {
+  margin: 0 0 0.25rem;
+  font-size: 1rem;
+  color: #333;
+}
+
+.alreadyPlayedHint {
+  margin: 1rem 0 0;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* Board area: relative container so toast can be positioned above grid */
+.boardArea {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+/* Confetti container spans whole board area */
+.confettiWrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 10;
+}

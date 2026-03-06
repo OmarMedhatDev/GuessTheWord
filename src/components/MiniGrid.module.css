@@ -1,0 +1,23 @@
+.miniGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.miniRow {
+  display: flex;
+  gap: 1px;
+}
+
+.miniCell {
+  width: 8px;
+  height: 8px;
+  border-radius: 1px;
+  font-size: 0;
+  border: 1px solid #d3d6da;
+  flex-shrink: 0;
+}
+
+.miniCell:not([style*="background: transparent"]) {
+  border-color: transparent;
+}

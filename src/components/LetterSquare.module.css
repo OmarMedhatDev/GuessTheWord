@@ -1,0 +1,95 @@
+.square {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  border: 2px solid var(--empty-border);
+  border-radius: 4px;
+  margin: 2px;
+  transition: border-color 0.1s;
+}
+
+@media (max-width: 400px) {
+  .square {
+    width: 42px;
+    height: 42px;
+    font-size: 1.25rem;
+  }
+}
+
+.empty {
+  background: var(--empty-bg);
+  border-color: var(--empty-border);
+  color: var(--text);
+}
+
+/* filled but no feedback yet (current typing row) */
+.empty:not(:empty) {
+  border-color: #878a8c;
+}
+
+.gray {
+  background: var(--gray);
+  border-color: var(--gray);
+  color: #fff;
+}
+
+.yellow {
+  background: var(--yellow);
+  border-color: var(--yellow);
+  color: #fff;
+}
+
+.green {
+  background: var(--green);
+  border-color: var(--green);
+  color: #fff;
+}
+
+/* Pop — applied via global class from index.css */
+.pop {
+  animation: pop 0.12s ease-in-out;
+}
+
+@keyframes pop {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.13);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Flip */
+.flip {
+  animation: flip-in 0.25s ease-in forwards, flip-out 0.25s ease-out 0.25s forwards;
+}
+
+@keyframes flip-in {
+  0% {
+    transform: rotateX(0deg);
+  }
+
+  100% {
+    transform: rotateX(-90deg);
+  }
+}
+
+@keyframes flip-out {
+  0% {
+    transform: rotateX(-90deg);
+  }
+
+  100% {
+    transform: rotateX(0deg);
+  }
+}

@@ -1,0 +1,128 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 1rem;
+}
+
+.modal {
+  background: #fff;
+  border-radius: 8px;
+  max-width: 400px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.title {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.close {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+  color: #666;
+  padding: 0 4px;
+}
+
+.close:hover {
+  color: #000;
+}
+
+.section {
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.section:last-child {
+  border-bottom: none;
+}
+
+.sectionTitle {
+  margin: 0 0 0.75rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.statsRow {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.statBox {
+  flex: 1;
+  text-align: center;
+}
+
+.statValue {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.statLabel {
+  font-size: 0.75rem;
+  color: #666;
+}
+
+.distRow {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 4px;
+}
+
+.distLabel {
+  width: 14px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.distBarBg {
+  flex: 1;
+  height: 20px;
+  background: #e5e5e5;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.distBar {
+  height: 100%;
+  background: #6aaa64;
+  border-radius: 2px;
+  min-width: 0;
+  transition: width 0.3s ease;
+}
+
+.distCount {
+  font-size: 0.8rem;
+  color: #666;
+  min-width: 24px;
+  text-align: right;
+}
+
+.placeholder {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #666;
+}

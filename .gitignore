@@ -1,0 +1,20 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+
+# Environment variables (keep secrets out of repo)
+.env
+
+# TypeScript build info
+tsconfig.tsbuildinfo
+tsconfig.node.tsbuildinfo
+vite.config.d.ts
+
+# Internal / dev-only docs
+DEPLOY.md
+
+# OS files
+.DS_Store
+Thumbs.db
