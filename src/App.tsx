@@ -55,9 +55,9 @@ function Toast({ message, variant = 'error', onHidden }: ToastProps) {
   const timerRef = useRef<ReturnType<typeof setTimeout>>();
 
   useEffect(() => {
-    // For error toasts auto-dismiss; win toast stays until next state
+    // Error toasts auto-dismiss; win/lost-reveal toasts stay longer
     if (variant === 'error') {
-      timerRef.current = setTimeout(() => setHiding(true), 1400);
+      timerRef.current = setTimeout(() => setHiding(true), 2500);
     }
     return () => clearTimeout(timerRef.current);
   }, [message, variant]);
@@ -141,7 +141,7 @@ function AppContent() {
           </div>
         </header>
 
-        {game.hasPlayedTodayAlready ? (
+        {game.hasPlayedTodayAlready && game.guesses.length === 0 ? (
           <div className={styles.alreadyPlayed}>
             <p className={styles.alreadyPlayedTitle}>You've already played today</p>
             <p className={styles.alreadyPlayedSub}>

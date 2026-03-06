@@ -21,8 +21,10 @@ function getTodaysWord(): string {
 
 export function useGameState() {
   const todayKey = getDateKeyForDate(new Date());
-  const alreadyPlayed = hasPlayedToday();
-  const savedResult = getTodayResult();
+  // Snapshot both values once at mount — prevents mid-session
+  // wins/losses from immediately switching to the "already played" screen.
+  const [alreadyPlayed] = useState(() => hasPlayedToday());
+  const [savedResult] = useState(() => getTodayResult());
 
   const [targetWord] = useState(() => getTodaysWord());
   const [guesses, setGuesses] = useState<GuessResult[]>(() => {
